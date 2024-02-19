@@ -15,18 +15,13 @@ layout {
 	        plugin location="zellij:tab-bar"
 	    }
 	    children
-	    pane size=2 borderless=true {
+	    pane size=1 borderless=true {
 	        plugin location="zellij:status-bar"
 	    }
 	}
 
 	basic {
 		pane command="htop"
-	}
-	basic focus=true {
-		pane  command="~/Downloads/wakarizer" {
-			focus true
-		}
 	}
 	basic {
 		pane

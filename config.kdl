@@ -267,6 +267,19 @@ themes {
         black 0 0 0
         white 255 255 255
     }
+    latte {
+        bg "#ffffff" // Surface2
+        fg "#acb0be" // Surface2
+        red "#d20f39"
+        green "#40a02b"
+        blue "#1e66f5"
+        yellow "#df8e1d"
+        magenta "#ea76cb" // Pink
+        orange "#fe640b" // Peach
+        cyan "#04a5e5" // Sky
+        black "#ffffff" // Crust
+        white "#4c4f69" // Text
+    }
 }
 
 // Choose the theme that is specified in the themes section.
@@ -307,8 +320,8 @@ theme "dracula"
 // that will be used by default if this option is not set.
 // Examples:
 //
-copy_command "xclip -selection clipboard" // x11
-// copy_command "wl-copy"                    // wayland
+//copy_command "xclip -selection clipboard" // x11
+copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
 
 // Choose the destination for copied text
@@ -328,7 +341,7 @@ copy_command "xclip -selection clipboard" // x11
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
 //
-scrollback_editor "hx"
+scrollback_editor "nvim"
 
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
