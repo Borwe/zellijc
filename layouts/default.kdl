@@ -11,16 +11,13 @@
 
 layout {
 	tab_template name="basic" {
-	    pane size=1 borderless=true {
-	        plugin location="zellij:tab-bar"
-	    }
 	    children
 	    pane size=1 borderless=true {
 	        plugin location="zellij:status-bar"
 	    }
 	}
 
-	basic {
+	basic name="htop" {
 		pane command="htop"
 	}
 	basic {

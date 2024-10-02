@@ -49,8 +49,9 @@ keybinds {
     tab {
         bind "Ctrl t" { SwitchToMode "Normal"; }
         bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
-        bind "h" "Left" "Up" "k" { GoToPreviousTab; }
-        bind "l" "Right" "Down" "j" { GoToNextTab; }
+        unbind "h" "Left" "Up" "k" "l" "Right" "Down" "j"
+        //bind "h" "Left" "Up" "k" { GoToPreviousTab; }
+        //bind "l" "Right" "Down" "j" { GoToNextTab; }
         bind "n" { NewTab { 
                     layout  "default_tab"
                 }; SwitchToMode "Normal"; }
@@ -68,7 +69,14 @@ keybinds {
         bind "7" { GoToTab 7; SwitchToMode "Normal"; }
         bind "8" { GoToTab 8; SwitchToMode "Normal"; }
         bind "9" { GoToTab 9; SwitchToMode "Normal"; }
-        bind "Tab" { ToggleTab; }
+        //bind "Tab" { ToggleTab; }
+        bind "Tab" {
+            LaunchOrFocusPlugin "file:/home/brian/.config/zellij/plugins/room.wasm" {
+                floating true
+                ignore_case true
+                quick_jump true
+            }
+        }
     }
     scroll {
         bind "Ctrl s" { SwitchToMode "Normal"; }
@@ -222,7 +230,7 @@ simplified_ui true
 //   - true (default)
 //   - false
 //
-// pane_frames true
+pane_frames false
 
 // Toggle between having Zellij lay out panes according to a predefined set of layouts whenever possible
 // Options:
@@ -312,7 +320,7 @@ theme "dracula"
 // Valid values: positive integers
 // Default value: 10000
 //
-// scroll_buffer_size 10000
+scroll_buffer_size 100000
 
 // Provide a command to execute when copying text. The text will be piped to
 // the stdin of the program to perform the copy. This can be used with
@@ -341,7 +349,7 @@ copy_command "wl-copy"                    // wayland
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
 //
-scrollback_editor "hx"
+scrollback_editor "nvim"
 
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
