@@ -20,7 +20,7 @@ layout {
 	basic name="htop" {
 		pane command="htop"
 	}
-	basic {
-		pane
+	basic name="workspaces"{
+		pane cwd="/home/brian/Workspaces/"
 	}
 }
