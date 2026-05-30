@@ -21,9 +21,6 @@ layout {
 		pane command="htop"
 	}
 
-	basic name="ai"{
-		pane command="/home/brian/.nom_install/bin/gemini"
-	}
 	basic name="workspaces"{
 		pane cwd="/home/brian/Workspaces/"
 	}
